@@ -27,3 +27,13 @@ export async function sendFinalEmail(payload: {
     // Returns { status: 'Email sent successfully' }
     return response.data;
 }
+
+export async function requestOtp(email: string) {
+    const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/email/request-otp`, { email });
+    return response.data; // { token: string }
+}
+
+export async function verifyOtp(otp: string, token: string) {
+    const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/email/verify-otp`, { otp, token });
+    return response.data; 
+}
