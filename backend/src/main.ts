@@ -20,7 +20,6 @@ async function bootstrap() {
   app.enableCors({
     // Replace with your actual frontend URL (e.g., http://localhost:3000)
     origin: '*',
-    methods: 'GET,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
 

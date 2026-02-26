@@ -3,6 +3,9 @@ node_modules/
 jspm_packages/
 typings/
 
+
+/.history
+
 # --- Next.js Build Output ---
 .next/
 out/
