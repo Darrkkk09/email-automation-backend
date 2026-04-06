@@ -15,6 +15,7 @@ async function bootstrap() {
       transform: true,
     }),
   );
+  app.setGlobalPrefix('_/backend');
 
   // Use the built-in enableCors method
   app.enableCors({
